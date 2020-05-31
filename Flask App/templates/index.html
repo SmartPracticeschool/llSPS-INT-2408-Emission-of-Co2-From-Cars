@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <script src='fms.js'></script> -->
+    <script type = "text/javascript"  src = "{{ url_for('static', filename = 'fms.js') }}" ></script>
+</head>
+<body style="background-color:powderblue">
+    <div class="container p-3 my-3 bg-dark text-white">
+    <form action="http://localhost:9000/login" method="POST">
+        <div class="form-group">
+          <label for="BRAND">Enter the Car Company</label>
+            <select class="browser-default custom-select" name="BRAND" id="BRANDSel" required>
+                <option value="" selected="selected">Enter the Car Company</option>
+              </select>
+        </div>
+        <div class="form-group">
+         
+            <label for="BRAND">Enter the Car Model</label>
+            <select class="browser-default custom-select" name="CM" id="CMSel"  required>
+                <option value="" selected="selected">Select BRAND FIRST </option>
+              </select>
+        </div>
+        <div class="form-group">
+         
+            <label for="BRAND">Vehicle Class Type</label>
+            <select class="browser-default custom-select" name="VC" id="VC" required>
+                
+                <option value ="COMPACT">COMPACT</option>
+                <option value ="SUV - SMALL">SUV-SMALL</option>
+                <option value ="MID-SIZE">MID-SIZE</option>
+                <option value ="MINICOMPACT">MINICOMPACT</option>
+                <option value ="SUBCOMPACT">SUBCOMPACT</option>
+                <option value ="TWO-SEATER">TWO-SEATER</option>
+                <option value ="FULL-SIZE">FULL-SIZE</option>
+                <option value ="STATION WAGON - SMALL">STATION_WAGON-SMALL</option>
+                <option value ="SUV - STANDARD">SUV-STANDARD</option>
+                <option value ="VAN - CARGO">VAN-CARGO</option>
+                <option value ="VAN - PASSENGER">VAN-PASSENGER</option>
+                <option value ="PICKUP TRUCK - STANDARD">PICKUP_TRUCK-STANDARD</option>
+                <option value ="MINIVAN">MINIVAN</option>
+                <option value ="SPECIAL PURPOSE VEHICLE">SPECIAL_PURPOSE_VEHICLE</option>
+              </select>
+        </div>
+
+    <div class="form-group">
+            <label for="EngineSize"> Model Year</label>
+             <input class="form-control" type="text" placeholder=" Enter the Model YEAR" name="MY" required>
+        </div>
+        
+        <div class="form-group">
+         
+            <label for="BRAND">Fuel Type</label>
+            <select class="browser-default custom-select" name="FT" id="FT" required>
+                <option value ="">Select Fule Type</option>
+                <option value ="Z">Z</option>
+                <option value ="X">X</option>
+                <option value ="E">E</option>
+                <option value ="D">D</option>
+              </select>
+        </div>
+
+        <div class="form-group">
+            <label for="EngineSize"> ENGINE SIZE</label>
+             <input class="form-control" type="text" placeholder=" Enter the Engine Size" name="ES" required>
+        </div>
+        <div class="form-group">
+            <label for="EngineSize">CYLINDERS</label>
+             <input class="form-control" type="text" placeholder="Enter the CYLINDERS" name="C" required>
+        </div>
+        <div class="form-group">
+            <label for="EngineSize">TRANSMISSION</label>
+             <input class="form-control" type="text" placeholder="Enter the TRANSMISSION" name="T" required>           
+        </div>
+        <div class="form-group">
+            <label for="EngineSize">FUEL CONSUMPTION CITY</label>
+             <input class="form-control" type="text" placeholder="Enter the FUELCONSUMPTION_CITY" name="FCC" required>
+       
+        </div>
+        <div class="form-group">
+            <label for="EngineSize">FUEL CONSUMPTION HWY</label>
+            <input class="form-control" type="text" placeholder="Enter the FUELCONSUMPTION_HWY" name="FCHWY" required>
+           
+        </div>
+        <div class="form-group">
+            <label for="EngineSize">FUEL CONSUMPTION COMB</label>
+            <input class="form-control" type="text" placeholder="Enter the FUELCONSUMPTION_COMB<" name="FCCC" required> 
+           
+        </div>
+        <div class="form-group">
+            
+            <label for="EngineSize">FUEL CONSUMPTION COMB MPG</label>
+            <input class="form-control" type="text" placeholder="Enter the FUEL CONSUMPTION COMB MPG" name="FCCMPG" required>  
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    
+    </div>
+      <b>{{label1}}</b>
+        <br>
+        <br>
+                 <b>{{label2}}</b>
+        <br>
+        <br>
+                <b>{{label3}}</b>
+        <br>    
+                <b>{{label4}}</b>
+        <br>
+                <b>{{label5}}</b>
+        <br>
+                 <b>{{label6}}</b>
+        <br>
+                <b>{{label7}}</b>
+
+ 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
